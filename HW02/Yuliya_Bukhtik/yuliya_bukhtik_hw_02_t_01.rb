@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-logs = 'log_file.txt'
+file_path = 'log_file_task_01.txt'
 
 def task_1(file)
   IO.foreach(file) do |line|
@@ -8,4 +8,4 @@ def task_1(file)
   end
 end
 
-task_1 logs
+task_1(file_path)
