@@ -5,13 +5,12 @@ require 'date'
 logs = 'log_file_task_03.txt'
 
 def task_3(file)
-  f = File.new file
-  lines = f.readlines
+  lines = File.readlines file
 
   # getting action duration
-  d = formatted_strings lines
+  action_duration = formatted_strings(lines)
 
-  puts d.to_f.to_s
+  puts action_duration.to_f.to_s
 end
 
 def formatted_strings(array)
@@ -22,12 +21,11 @@ def formatted_strings(array)
   array.map! { |elem| elem[/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d/] }
 
   # getting DateTime object from date format
-  a = DateTime.parse(array[0])
-  b = DateTime.parse(array[1])
+  time_start = DateTime.parse(array[0])
+  time_end = DateTime.parse(array[1])
 
   # action duration calculation
-  duration = quantity_of_seconds(b) - quantity_of_seconds(a)
-  duration
+  quantity_of_seconds(time_end) - quantity_of_seconds(time_start)
 end
 
 # getting quantity of seconds from DateTime objects

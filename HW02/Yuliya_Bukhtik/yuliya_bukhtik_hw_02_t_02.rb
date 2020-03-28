@@ -3,8 +3,7 @@
 file_path = 'log_file_task_02.txt'
 
 def task_2(file)
-  f = File.new file
-  lines = f.readlines
+  lines = File.readlines file
 
   # by the below method lines with ERROR will be deleted
   lines.delete_if { |line| line.include? 'error' }
