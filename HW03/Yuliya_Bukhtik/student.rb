@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require 'observable'
+require_relative 'observable'
 
 class Student
   include Observable
 
-  attr_writer :homework_date
+  attr_accessor :name, :surname, :homework
 
   def initialize(name:, surname:)
     super()
     @name = name
     @surname = surname
-    @homework_date = homework_date
-    @homeworks = []
+    @homework = homework
+    @list_of_homeworks = []
   end
 
-  def homeworks
-    @homeworks << @homework_date
+  def add_homework
+    @list_of_homeworks << @homework
   end
 end

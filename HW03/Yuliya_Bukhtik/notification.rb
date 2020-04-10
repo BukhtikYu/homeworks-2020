@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require 'BaseObserver'
-
-class Notification < BaseObserver
+class Notification
   def update(mentor)
-    mentor.notification
+    mentor.add_notification
   end
 end

@@ -2,11 +2,10 @@
 
 # this is a main module to run the application
 
-require 'base_observer'
-require 'student'
-require 'mentor'
-require 'homework'
-require 'notification'
+require_relative 'student'
+require_relative 'mentor'
+require_relative 'homework'
+require_relative 'notification'
 
 module App
   def self.run
@@ -16,7 +15,8 @@ module App
     student.add_observer(Homework.new)
     student.add_observer(Notification.new)
 
-    student.homework_date = 'homework_date.txt' # student submitted his homework
+    student.homework = 'homework_date.txt' # student submitted his homework
+    mentor.notification = "check please HW #{student.homework_date}"
 
     student.notify_observers
 

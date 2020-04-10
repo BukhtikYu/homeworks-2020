@@ -1,11 +1,7 @@
-# This is class Homework
-
 # frozen_string_literal: true
 
-require 'BaseObserver'
-
-class Homework < BaseObserver
+class Homework
   def update(student)
-    student.homeworks
+    student.add_homework
   end
 end

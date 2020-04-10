@@ -1,19 +1,20 @@
 # frozen_string_literal: true
 
-# this class Mentor
-
 class Mentor
+  attr_accessor :name, :surname, :notification
+
   def initialize(name:, surname:)
     @name = name
     @surname = surname
-    @notification = []
+    @notification = notification
+    @list_of_notifications = []
   end
 
-  def notification(notification)
-    @notification << notification
+  def add_notification
+    @list_of_notifications << @notification
   end
 
   def read_notifications!
-    @notification.delete(notification)
+    @list_of_notifications.delete(@notification)
   end
 end
