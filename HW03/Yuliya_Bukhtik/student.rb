@@ -8,7 +8,6 @@ class Student
   attr_accessor :name, :surname, :homework
 
   def initialize(name:, surname:)
-    super()
     @name = name
     @surname = surname
     @homework = homework
