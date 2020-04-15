@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module MyModule
-  def my_map
+  def my_each
     each do |item|
       p item
     end
@@ -15,7 +15,7 @@ module MyModule
     p new_array
   end
 
-  def my_each
+  def my_map
     new_array = []
     each do |item|
       item *= item

@@ -8,9 +8,9 @@ require_relative 'my_module.rb'
 RSpec.describe MyModule do
   subject(:a) { Array.new([1, 2, 3, 4]) }
 
-  describe '#my_map' do
+  describe '#my_each' do
     it 'iterates over the array and prints each element' do
-      expect(a.my_map).to eq [1, 2, 3, 4]
+      expect(a.my_each).to eq [1, 2, 3, 4]
     end
   end
 
@@ -20,9 +20,9 @@ RSpec.describe MyModule do
     end
   end
 
-  describe '#my_each' do
+  describe '#my_map' do
     it 'returnes new array with square of each element' do
-      expect(a.my_each).to eq [1, 4, 9, 16]
+      expect(a.my_map).to eq [1, 4, 9, 16]
     end
   end
 end
