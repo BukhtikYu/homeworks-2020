@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Style/Documentation
 # rubocop:disable Style/For
 
 module MyModule
@@ -29,5 +28,4 @@ module MyModule
     new_array
   end
 end
-# rubocop:enable Style/Documentation
 # rubocop:enable Style/For
