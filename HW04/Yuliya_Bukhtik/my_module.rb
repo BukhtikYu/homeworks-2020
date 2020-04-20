@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-rubocop:disable Style/Documentation
-rubocop:disable Style/For
-rubocop:disable Lint/Syntax
+# rubocop:disable Style/Documentation
+# rubocop:disable Style/For
 
 module MyModule
   def my_each
@@ -30,3 +29,5 @@ module MyModule
     new_array
   end
 end
+# rubocop:enable Style/Documentation
+# rubocop:enable Style/For
