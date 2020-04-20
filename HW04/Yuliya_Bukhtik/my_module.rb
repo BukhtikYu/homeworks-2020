@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+rubocop:disable Style/Documentation
+rubocop:disable Style/For
+rubocop:disable Lint/Syntax
+
 module MyModule
   def my_each
     length.times do |item|

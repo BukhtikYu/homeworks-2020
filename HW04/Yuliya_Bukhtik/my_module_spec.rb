@@ -4,6 +4,9 @@ require 'spec_helper'
 require_relative 'my_module'
 require_relative 'array'
 
+rubocop:disable Style/SymbolProc
+rubocop:disable Lint/Syntax
+
 RSpec.describe MyModule do
   subject(:a) { Array.new([1, 2, 3, 4]) }
 
